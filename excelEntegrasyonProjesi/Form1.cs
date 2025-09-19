@@ -40,6 +40,8 @@ namespace excelEntegrasyonProjesi
                 SqlCommand sqlCommand = new SqlCommand(sql, baglanti);
                 Microsoft.Data.SqlClient.SqlDataReader srd = sqlCommand.ExecuteReader();
 
+                int row = 2;
+
                 while (srd.Read())
                 {
                     string pno = srd[0].ToString();
@@ -49,6 +51,17 @@ namespace excelEntegrasyonProjesi
                     string sehir = srd[4].ToString();
                     richTextBox1.Text = richTextBox1.Text + pno + "  " + ad + "  " + soyad + "  " + semt + "  " + sehir + "\n";
 
+                    range = sheet1.Cells[row, 1];
+                    range.Value2 = pno;
+                    range = sheet1.Cells[row, 2];
+                    range.Value2 = ad;
+                    range = sheet1.Cells[row, 3];
+                    range.Value2 = soyad; 
+                    range = sheet1.Cells[row, 4];
+                    range.Value2 = semt;
+                    range = sheet1.Cells[row, 5];
+                    range.Value2 = sehir;
+                    row++;
                 }
 
             }
