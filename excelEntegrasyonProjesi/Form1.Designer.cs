@@ -34,13 +34,13 @@
             // 
             // btnVTdenOku
             // 
-            btnVTdenOku.Location = new Point(280, 85);
+            btnVTdenOku.Location = new Point(219, 96);
             btnVTdenOku.Name = "btnVTdenOku";
-            btnVTdenOku.Size = new Size(182, 40);
+            btnVTdenOku.Size = new Size(306, 40);
             btnVTdenOku.TabIndex = 0;
-            btnVTdenOku.Text = "Veri Tabanından Oku";
+            btnVTdenOku.Text = "Veri Tabanından Oku ve Excele yaz";
             btnVTdenOku.UseVisualStyleBackColor = true;
-            btnVTdenOku.Click += btnVTdenOku_Click;
+            btnVTdenOku.Click += BtnVTdenOku_Click;
             // 
             // richTextBox1
             // 
